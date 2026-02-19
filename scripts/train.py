@@ -11,7 +11,7 @@ os.environ["MLFLOW_S3_ENDPOINT_URL"] = "http://localhost:9000"
 os.environ["AWS_ACCESS_KEY_ID"] = "minioadmin"
 os.environ["AWS_SECRET_ACCESS_KEY"] = "minioadmin"
 
-mlflow.set_tracking_uri("http://localhost:5000")
+mlflow.set_tracking_uri("http://localhost:5001")
 mlflow.set_experiment("iris-classifier")
 
 X, y = load_iris(return_X_y=True)
@@ -31,4 +31,4 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(model, "model")
     
     print(f"Accuracy: {accuracy:.4f}")
-    print("Check MLflow UI at http://localhost:5000")
+    print("Check MLflow UI at http://localhost:5001")

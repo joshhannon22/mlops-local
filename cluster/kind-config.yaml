@@ -11,5 +11,5 @@ nodes:
         hostPort: 9001
         protocol: TCP
       - containerPort: 30500
-        hostPort: 5000
+        hostPort: 5001
         protocol: TCP
